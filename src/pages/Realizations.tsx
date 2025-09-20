@@ -4,10 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Eye, ExternalLink } from "lucide-react";
 
-// Import images
-import heroImage from "@/assets/hero-construction.jpg";
-import buildingImage from "@/assets/building-completed.jpg";
-import workshopImage from "@/assets/workshop-metalwork.jpg";
+// Import real project images
+import chantierFondations1 from "@/assets/chantier-fondations-1.jpg";
+import chantierFondations2 from "@/assets/chantier-fondations-2.jpg";
+import cuisineModerne1 from "@/assets/cuisine-moderne-1.jpg";
+import cuisineModerne2 from "@/assets/cuisine-moderne-2.jpg";
+import suiviChantier1 from "@/assets/suivi-chantier-1.jpg";
+import suiviChantier2 from "@/assets/suivi-chantier-2.jpg";
+import immeubleModerne1 from "@/assets/immeuble-moderne-1.jpg";
+import immeubleModerne2 from "@/assets/immeuble-moderne-2.jpg";
+import interieurConstruction from "@/assets/interieur-construction.jpg";
+import salleBainModerne from "@/assets/salle-bain-moderne.jpg";
 
 const Realizations = () => {
   const [filter, setFilter] = useState("all");
@@ -15,63 +22,103 @@ const Realizations = () => {
   const projects = [
     {
       id: 1,
-      title: "Complexe Résidentiel Les Palmiers",
+      title: "Complexe Résidentiel Moderne",
       category: "batiment",
       location: "Yopougon, Côte d'Ivoire",
       year: "2024",
-      description: "Construction d'un ensemble résidentiel moderne de 24 logements avec espaces verts et parking.",
-      image: buildingImage,
-      tags: ["Résidentiel", "Gros œuvre", "Finitions"]
+      description: "Conception et construction d'un complexe résidentiel moderne avec architecture contemporaine et espaces optimisés.",
+      image: immeubleModerne1,
+      tags: ["Résidentiel", "Architecture", "Moderne"]
     },
     {
       id: 2,
-      title: "Chantier Infrastructure Routière",
-      category: "travaux-publics",
-      location: "Abidjan Nord",
-      year: "2023",
-      description: "Réhabilitation de 5km de voirie urbaine avec assainissement et éclairage public.",
-      image: heroImage,
-      tags: ["Voirie", "Assainissement", "Infrastructure"]
+      title: "Fondations et Gros Œuvre",
+      category: "batiment",
+      location: "Niangon Sud",
+      year: "2024",
+      description: "Réalisation de fondations en béton armé avec suivi technique rigoureux et contrôle qualité.",
+      image: chantierFondations1,
+      tags: ["Fondations", "Béton armé", "Gros œuvre"]
     },
     {
       id: 3,
-      title: "Atelier Menuiserie Moderne",
+      title: "Cuisine Sur Mesure Haut de Gamme",
       category: "menuiserie",
-      location: "Zone Industrielle",
+      location: "Cocody",
       year: "2024",
-      description: "Aménagement complet d'un atelier de menuiserie avec équipements sur mesure.",
-      image: workshopImage,
-      tags: ["Menuiserie", "Aménagement", "Sur mesure"]
+      description: "Conception et réalisation d'une cuisine moderne en bois avec plan de travail en marbre et finitions premium.",
+      image: cuisineModerne1,
+      tags: ["Menuiserie", "Cuisine", "Sur mesure"]
     },
     {
       id: 4,
-      title: "Villa Contemporaine Riviera",
+      title: "Étude et Suivi de Chantier",
       category: "batiment",
-      location: "Riviera Golf",
-      year: "2023",
-      description: "Construction d'une villa haut de gamme avec piscine et aménagements extérieurs.",
-      image: buildingImage,
-      tags: ["Villa", "Piscine", "Haut de gamme"]
+      location: "Abidjan",
+      year: "2024",
+      description: "Supervision technique et contrôle qualité avec équipe d'ingénieurs expérimentés sur chantier.",
+      image: suiviChantier1,
+      tags: ["Étude", "Suivi", "Contrôle qualité"]
     },
     {
       id: 5,
-      title: "Portails et Clôtures Sécurisés",
-      category: "ferronnerie",
-      location: "Cocody",
+      title: "Menuiserie Aluminium",
+      category: "menuiserie",
+      location: "Riviera",
       year: "2024",
-      description: "Fabrication et installation de portails automatisés et clôtures de sécurité.",
-      image: workshopImage,
-      tags: ["Ferronnerie", "Sécurité", "Automatisme"]
+      description: "Installation de menuiseries aluminium avec double vitrage et finitions modernes pour habitat résidentiel.",
+      image: cuisineModerne2,
+      tags: ["Aluminium", "Fenêtres", "Finitions"]
     },
     {
       id: 6,
-      title: "Centre Commercial Plateau",
+      title: "Aménagement Intérieur",
       category: "batiment",
-      location: "Plateau, Abidjan",
+      location: "Plateau",
+      year: "2024",
+      description: "Aménagement complet d'espaces intérieurs avec faux plafonds, éclairage et finitions techniques.",
+      image: interieurConstruction,
+      tags: ["Aménagement", "Faux plafond", "Finitions"]
+    },
+    {
+      id: 7,
+      title: "Salle de Bain Moderne",
+      category: "batiment",
+      location: "Marcory",
+      year: "2024",
+      description: "Réalisation complète de salle de bain avec carrelage moderne et finitions de qualité supérieure.",
+      image: salleBainModerne,
+      tags: ["Salle de bain", "Carrelage", "Finitions"]
+    },
+    {
+      id: 8,
+      title: "Immeuble Résidentiel R+3",
+      category: "batiment",
+      location: "Yopougon",
       year: "2023",
-      description: "Construction et aménagement d'un centre commercial moderne avec parking étagé.",
-      image: buildingImage,
-      tags: ["Commercial", "Parking", "Moderne"]
+      description: "Construction d'un immeuble résidentiel moderne R+3 avec balcons et espaces commerciaux au rez-de-chaussée.",
+      image: immeubleModerne2,
+      tags: ["Immeuble", "R+3", "Commercial"]
+    },
+    {
+      id: 9,
+      title: "Infrastructure de Fondations",
+      category: "travaux-publics",
+      location: "Bingerville",
+      year: "2024",
+      description: "Réalisation de fondations spéciales avec système de poteaux et longrines pour infrastructure lourde.",
+      image: chantierFondations2,
+      tags: ["Infrastructure", "Fondations", "Béton"]
+    },
+    {
+      id: 10,
+      title: "Contrôle Technique Chantier",
+      category: "batiment",
+      location: "Abidjan",
+      year: "2024",
+      description: "Mission de contrôle technique et vérification de conformité avec documentation complète des travaux.",
+      image: suiviChantier2,
+      tags: ["Contrôle", "Technique", "Conformité"]
     }
   ];
 
