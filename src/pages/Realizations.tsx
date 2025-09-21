@@ -5,16 +5,16 @@ import { Badge } from "@/components/ui/badge";
 import { Eye, ExternalLink } from "lucide-react";
 
 // Import real project images
+import amenagementInterieur from "@/assets/amenagement-interieur-faux-plafond.jpg";
+import ingenieurChantier from "@/assets/ingenieur-chantier-fondations.jpg";
+import ouvrierMesure from "@/assets/ouvrier-mesure-chantier.jpg";
+import fondationsArmatures from "@/assets/fondations-armatures-beton.jpg";
+import villaDuplexRendu from "@/assets/villa-duplex-moderne-rendu.jpg";
+import villa4pRendu from "@/assets/villa-4p-yakro-rendu.jpg";
 import chantierFondations1 from "@/assets/chantier-fondations-1.jpg";
 import chantierFondations2 from "@/assets/chantier-fondations-2.jpg";
 import cuisineModerne1 from "@/assets/cuisine-moderne-1.jpg";
 import cuisineModerne2 from "@/assets/cuisine-moderne-2.jpg";
-import suiviChantier1 from "@/assets/suivi-chantier-1.jpg";
-import suiviChantier2 from "@/assets/suivi-chantier-2.jpg";
-import immeubleModerne1 from "@/assets/immeuble-moderne-1.jpg";
-import immeubleModerne2 from "@/assets/immeuble-moderne-2.jpg";
-import interieurConstruction from "@/assets/interieur-construction.jpg";
-import salleBainModerne from "@/assets/salle-bain-moderne.jpg";
 
 const Realizations = () => {
   const [filter, setFilter] = useState("all");
@@ -22,103 +22,103 @@ const Realizations = () => {
   const projects = [
     {
       id: 1,
-      title: "Complexe Résidentiel Moderne",
+      title: "Villa Duplex Moderne 5 Pièces",
       category: "batiment",
       location: "Yopougon, Côte d'Ivoire",
       year: "2024",
-      description: "Conception et construction d'un complexe résidentiel moderne avec architecture contemporaine et espaces optimisés.",
-      image: immeubleModerne1,
-      tags: ["Résidentiel", "Architecture", "Moderne"]
+      description: "Conception architecturale d'une villa duplex moderne avec terrasse, garage intégré et finitions contemporaines.",
+      image: villaDuplexRendu,
+      tags: ["Villa", "Duplex", "Architecture", "3D"]
     },
     {
       id: 2,
-      title: "Fondations et Gros Œuvre",
+      title: "Villa 4 Pièces Yakro",
       category: "batiment",
-      location: "Niangon Sud",
+      location: "Yakro",
       year: "2024",
-      description: "Réalisation de fondations en béton armé avec suivi technique rigoureux et contrôle qualité.",
-      image: chantierFondations1,
-      tags: ["Fondations", "Béton armé", "Gros œuvre"]
+      description: "Étude et conception d'une villa moderne 4 pièces avec toiture bac acier et aménagement extérieur complet.",
+      image: villa4pRendu,
+      tags: ["Villa", "4P", "Conception", "Moderne"]
     },
     {
       id: 3,
-      title: "Cuisine Sur Mesure Haut de Gamme",
+      title: "Aménagement Intérieur et Faux Plafond",
+      category: "batiment",
+      location: "Abidjan",
+      year: "2025",
+      description: "Réalisation d'aménagement intérieur avec faux plafond métallique, éclairage intégré et finitions techniques.",
+      image: amenagementInterieur,
+      tags: ["Aménagement", "Faux plafond", "Éclairage"]
+    },
+    {
+      id: 4,
+      title: "Fondations Spécialisées en Béton Armé",
+      category: "batiment",
+      location: "Yopougon",
+      year: "2024",
+      description: "Réalisation de fondations avec armatures en béton, poteaux et longrines pour structure résidentielle.",
+      image: fondationsArmatures,
+      tags: ["Fondations", "Béton armé", "Structure"]
+    },
+    {
+      id: 5,
+      title: "Supervision Technique de Chantier",
+      category: "batiment",
+      location: "Abidjan",
+      year: "2024",
+      description: "Suivi technique et contrôle qualité avec ingénieur sur site pour travaux de fondations et gros œuvre.",
+      image: ingenieurChantier,
+      tags: ["Supervision", "Ingénierie", "Contrôle qualité"]
+    },
+    {
+      id: 6,
+      title: "Travaux de Mesure et Implantation",
+      category: "travaux-publics",
+      location: "Côte d'Ivoire",
+      year: "2024",
+      description: "Mesures topographiques et implantation de chantier avec équipements de précision.",
+      image: ouvrierMesure,
+      tags: ["Topographie", "Mesure", "Implantation"]
+    },
+    {
+      id: 7,
+      title: "Cuisine Moderne Sur Mesure",
       category: "menuiserie",
       location: "Cocody",
       year: "2024",
-      description: "Conception et réalisation d'une cuisine moderne en bois avec plan de travail en marbre et finitions premium.",
+      description: "Conception et réalisation d'une cuisine moderne avec menuiserie sur mesure et finitions haut de gamme.",
       image: cuisineModerne1,
       tags: ["Menuiserie", "Cuisine", "Sur mesure"]
     },
     {
-      id: 4,
-      title: "Étude et Suivi de Chantier",
-      category: "batiment",
-      location: "Abidjan",
-      year: "2024",
-      description: "Supervision technique et contrôle qualité avec équipe d'ingénieurs expérimentés sur chantier.",
-      image: suiviChantier1,
-      tags: ["Étude", "Suivi", "Contrôle qualité"]
-    },
-    {
-      id: 5,
-      title: "Menuiserie Aluminium",
+      id: 8,
+      title: "Menuiserie Aluminium Premium",
       category: "menuiserie",
       location: "Riviera",
       year: "2024",
-      description: "Installation de menuiseries aluminium avec double vitrage et finitions modernes pour habitat résidentiel.",
+      description: "Installation de menuiseries aluminium avec double vitrage pour habitat résidentiel moderne.",
       image: cuisineModerne2,
-      tags: ["Aluminium", "Fenêtres", "Finitions"]
-    },
-    {
-      id: 6,
-      title: "Aménagement Intérieur",
-      category: "batiment",
-      location: "Plateau",
-      year: "2024",
-      description: "Aménagement complet d'espaces intérieurs avec faux plafonds, éclairage et finitions techniques.",
-      image: interieurConstruction,
-      tags: ["Aménagement", "Faux plafond", "Finitions"]
-    },
-    {
-      id: 7,
-      title: "Salle de Bain Moderne",
-      category: "batiment",
-      location: "Marcory",
-      year: "2024",
-      description: "Réalisation complète de salle de bain avec carrelage moderne et finitions de qualité supérieure.",
-      image: salleBainModerne,
-      tags: ["Salle de bain", "Carrelage", "Finitions"]
-    },
-    {
-      id: 8,
-      title: "Immeuble Résidentiel R+3",
-      category: "batiment",
-      location: "Yopougon",
-      year: "2023",
-      description: "Construction d'un immeuble résidentiel moderne R+3 avec balcons et espaces commerciaux au rez-de-chaussée.",
-      image: immeubleModerne2,
-      tags: ["Immeuble", "R+3", "Commercial"]
+      tags: ["Aluminium", "Menuiserie", "Finitions"]
     },
     {
       id: 9,
-      title: "Infrastructure de Fondations",
+      title: "Fondations et Infrastructure Lourde",
       category: "travaux-publics",
       location: "Bingerville",
       year: "2024",
-      description: "Réalisation de fondations spéciales avec système de poteaux et longrines pour infrastructure lourde.",
-      image: chantierFondations2,
+      description: "Réalisation de fondations pour infrastructure avec système de poteaux en béton armé.",
+      image: chantierFondations1,
       tags: ["Infrastructure", "Fondations", "Béton"]
     },
     {
       id: 10,
-      title: "Contrôle Technique Chantier",
+      title: "Gros Œuvre et Structure",
       category: "batiment",
       location: "Abidjan",
       year: "2024",
-      description: "Mission de contrôle technique et vérification de conformité avec documentation complète des travaux.",
-      image: suiviChantier2,
-      tags: ["Contrôle", "Technique", "Conformité"]
+      description: "Travaux de gros œuvre avec coulage béton et mise en place d'armatures pour structure porteuse.",
+      image: chantierFondations2,
+      tags: ["Gros œuvre", "Structure", "Béton"]
     }
   ];
 
