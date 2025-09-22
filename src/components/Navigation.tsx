@@ -60,6 +60,11 @@ const Navigation = () => {
 
           {/* Action Buttons Desktop */}
           <div className="hidden md:flex items-center space-x-3">
+            <Link to="/devis">
+              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 border-primary">
+                Devis Gratuit
+              </Button>
+            </Link>
             <a href="tel:+2250749992599">
               <Button variant="outline" size="sm" className="hidden lg:flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -108,9 +113,14 @@ const Navigation = () => {
                 </Link>
               ))}
               
-              <div className="pt-3 border-t border-border">
+              <div className="pt-3 border-t border-border space-y-2">
+                <Link to="/devis" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full justify-center bg-primary text-primary-foreground hover:bg-primary/90">
+                    Devis Gratuit
+                  </Button>
+                </Link>
                 <a href="https://wa.me/2250749992599" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full justify-center gap-2">
+                  <Button variant="outline" className="w-full justify-center gap-2">
                     <MessageSquare className="w-4 h-4" />
                     Nous contacter sur WhatsApp
                   </Button>
