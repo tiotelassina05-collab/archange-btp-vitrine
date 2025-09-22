@@ -5,7 +5,8 @@ import {
   Wrench, 
   Hammer, 
   PaintBucket, 
-  ShieldCheck 
+  ShieldCheck,
+  MessageCircle
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -95,6 +96,18 @@ const Services = () => {
         "Structures métalliques"
       ],
       color: "primary"
+    },
+    {
+      icon: MessageCircle,
+      title: "Assistance - Conseils - Expertise",
+      description: "Accompagnement personnalisé et expertise technique pour tous vos projets BTP.",
+      features: [
+        "Conseil en ingénierie",
+        "Assistance technique",
+        "Expertise et audit",
+        "Formation et accompagnement"
+      ],
+      color: "secondary"
     }
   ];
 

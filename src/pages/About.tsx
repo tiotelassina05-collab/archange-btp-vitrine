@@ -1,4 +1,4 @@
-import { Building, Users, Target, Award, Clock, Shield } from "lucide-react";
+import { Building, Users, Target, Award, Clock, Shield, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const About = () => {
@@ -74,7 +74,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
@@ -116,6 +116,21 @@ const About = () => {
                 <p className="text-muted-foreground">
                   Le respect des délais et des engagements pris envers nos clients 
                   constitue un pilier fondamental de notre approche.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <Lightbulb className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle>Innovation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Nous intégrons les dernières technologies et méthodes de construction 
+                  pour offrir des solutions modernes et durables à nos clients.
                 </p>
               </CardContent>
             </Card>
