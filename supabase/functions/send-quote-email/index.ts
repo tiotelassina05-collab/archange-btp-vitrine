@@ -31,8 +31,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to ARCHANGE BTP
     const emailResponse = await resend.emails.send({
-      from: "ARCHANGE BTP - Devis <onboarding@resend.dev>",
-      to: ["archangebtp@gmail.com"],
+      from: "ARCHANGE BTP - Devis <contact@archange-btp.com>",
+      to: ["contact@archange-btp.com"],
       subject: `Nouvelle demande de devis - ${formData.firstName} ${formData.lastName}`,
       html: `
         <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -73,7 +73,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to client
     await resend.emails.send({
-      from: "ARCHANGE BTP <onboarding@resend.dev>",
+      from: "ARCHANGE BTP <contact@archange-btp.com>",
       to: [formData.email],
       subject: "Confirmation de réception de votre demande de devis",
       html: `
@@ -106,7 +106,7 @@ const handler = async (req: Request): Promise<Response> => {
             <p>Cordialement,<br>
             <strong>L'équipe ARCHANGE BTP SARL</strong><br>
             Yopougon Niangon Sud, Abidjan<br>
-            📞 07 49 99 25 99 | ✉️ archangebtp@gmail.com</p>
+            📞 07 49 99 25 99 | ✉️ contact@archange-btp.com</p>
           </div>
         </div>
       `,
