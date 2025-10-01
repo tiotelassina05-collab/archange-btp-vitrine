@@ -42,7 +42,7 @@ const Realizations = () => {
     },
     {
       id: 3,
-      title: "Aménagement Intérieur et Faux Plafond",
+      title: "Travaux faux-plafond dalle minérale",
       category: "batiment",
       location: "Abidjan",
       year: "2025",
