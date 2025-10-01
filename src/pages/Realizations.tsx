@@ -74,7 +74,7 @@ const Realizations = () => {
       id: 6,
       title: "Travaux de Mesure et Implantation",
       category: "travaux-publics",
-      location: "Côte d'Ivoire",
+      location: "Projet R+3 Mr. Cissé Amadou Songon",
       year: "2024",
       description: "Mesures topographiques et implantation de chantier avec équipements de précision.",
       image: ouvrierMesure,
