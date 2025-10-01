@@ -54,7 +54,7 @@ const Realizations = () => {
       id: 4,
       title: "Travaux Gros-oeuvre Fondation",
       category: "batiment",
-      location: "Fondation R+5 Cocody M'Pouto",
+      location: "Fondation R+5 Cocody M'pouto",
       year: "2024",
       description: "Réalisation de fondations avec armatures en béton, poteaux et longrines pour structure résidentielle.",
       image: fondationsArmatures,
