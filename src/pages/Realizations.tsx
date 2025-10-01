@@ -44,7 +44,7 @@ const Realizations = () => {
       id: 3,
       title: "Travaux faux-plafond dalle minérale",
       category: "batiment",
-      location: "Projet R+3 PSL Abidjan Vridi",
+      location: "Réhabilitation appartement 2P Treichville",
       year: "2025",
       description: "Réalisation d'aménagement intérieur avec faux plafond métallique, éclairage intégré et finitions techniques.",
       image: amenagementInterieur,
