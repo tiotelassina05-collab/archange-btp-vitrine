@@ -72,7 +72,7 @@ const Realizations = () => {
     },
     {
       id: 6,
-      title: "Travaux de Mesure et Implantation",
+      title: "Suivi Travaux Gros-oeuvre Fondation",
       category: "travaux-publics",
       location: "Projet R+3 Mr. Cissé Amadou Songon",
       year: "2024",
