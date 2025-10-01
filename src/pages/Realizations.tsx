@@ -44,7 +44,7 @@ const Realizations = () => {
       id: 3,
       title: "Travaux faux-plafond dalle minérale",
       category: "batiment",
-      location: "Réhabilitation appartement 2P Treichville",
+      location: "Rehabilitation appartement 2p Treichville",
       year: "2025",
       description: "Réalisation d'aménagement intérieur avec faux plafond métallique, éclairage intégré et finitions techniques.",
       image: amenagementInterieur,
