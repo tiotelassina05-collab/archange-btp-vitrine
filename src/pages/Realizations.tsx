@@ -64,7 +64,7 @@ const Realizations = () => {
       id: 5,
       title: "Supervision Technique de Chantier",
       category: "batiment",
-      location: "Abidjan",
+      location: "Réhabilitation appartement 2P Treichville",
       year: "2024",
       description: "Suivi technique et contrôle qualité avec ingénieur sur site pour travaux de fondations et gros œuvre.",
       image: ingenieurChantier,
