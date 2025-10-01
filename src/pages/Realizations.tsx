@@ -52,7 +52,7 @@ const Realizations = () => {
     },
     {
       id: 4,
-      title: "Fondations Spécialisées en Béton Armé",
+      title: "Travaux Gros-oeuvre Fondation",
       category: "batiment",
       location: "Yopougon",
       year: "2024",
