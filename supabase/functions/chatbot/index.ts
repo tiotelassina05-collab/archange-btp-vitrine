@@ -13,6 +13,8 @@ Base de connaissances – ARCHANGE BTP SARL
 Nom complet : ARCHANGE BTP SARL
 Année de création : 2018
 Statut : Société à responsabilité limitée (SARL)
+DFE N° CC: 1919176 Y
+N°RCCM: CI-ABJ-2018-B-09155
 
 📍 Localisation
 Adresse : Yopougon Niangon sud à gauche, Abidjan, Côte d'Ivoire
@@ -20,7 +22,7 @@ Adresse : Yopougon Niangon sud à gauche, Abidjan, Côte d'Ivoire
 📞 Contacts
 Téléphone : 07 49 99 25 99
 Horaires : Lundi au vendredi 7h30 - 17h30 / samedi 8h00 - 12h00
-E-mail : archangebtp@gmail.com
+E-mail : contact@archange-btp.com
 Facebook : Page officielle
 
 ⚒️ Domaines d'activité
@@ -32,6 +34,7 @@ ARCHANGE BTP SARL intervient dans :
 - Immobilier (promotion, gestion de biens)
 - Menuiserie (bois et aluminium)
 - Ferronnerie (ouvrages métalliques, décoratifs et structurels)
+- Maintenance et entretien de bâtiments
 - Assistance - Conseils - Expertise
 
 🏗️ Réalisations types

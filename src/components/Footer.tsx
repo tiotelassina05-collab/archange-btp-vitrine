@@ -12,6 +12,7 @@ const Footer = () => {
     { name: "À propos", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Réalisations", href: "/realizations" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -22,7 +23,8 @@ const Footer = () => {
     "Travaux publics",
     "Immobilier",
     "Menuiserie",
-    "Ferronnerie"
+    "Ferronnerie",
+    "Maintenance et entretien"
   ];
 
   return (
@@ -74,10 +76,10 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 <a 
-                  href="mailto:archangebtp@gmail.com" 
+                  href="mailto:contact@archange-btp.com" 
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
-                  archangebtp@gmail.com
+                  contact@archange-btp.com
                 </a>
               </div>
 
@@ -125,8 +127,13 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-muted-foreground">
-              © {currentYear} ARCHANGE BTP SARL. Tous droits réservés.
+            <div className="text-sm text-muted-foreground text-center md:text-left">
+              <div className="mb-2">© {currentYear} ARCHANGE BTP SARL. Tous droits réservés.</div>
+              <div className="text-xs space-x-3">
+                <span>DFE N° CC: 1919176 Y</span>
+                <span className="text-muted-foreground/50">•</span>
+                <span>N°RCCM: CI-ABJ-2018-B-09155</span>
+              </div>
             </div>
             
             <div className="flex items-center gap-4">

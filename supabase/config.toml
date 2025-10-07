@@ -1,1 +1,7 @@
 project_id = "bhjwdccmbmxudyvllsfu"
+
+[functions.chatbot]
+verify_jwt = false
+
+[functions.send-quote-email]
+verify_jwt = false

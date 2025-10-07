@@ -108,6 +108,18 @@ const Services = () => {
         "Formation et accompagnement"
       ],
       color: "secondary"
+    },
+    {
+      icon: PaintBucket,
+      title: "Maintenance et entretien de bâtiments",
+      description: "Services complets de maintenance préventive et corrective pour préserver la valeur de votre patrimoine.",
+      features: [
+        "Maintenance préventive régulière",
+        "Réparations et dépannages",
+        "Entretien des équipements",
+        "Contrats de maintenance"
+      ],
+      color: "accent"
     }
   ];
 
