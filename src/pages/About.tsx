@@ -206,7 +206,7 @@ const About = () => {
                     </div>
                     <div className="bg-background/80 rounded-lg p-4">
                       <div className="font-semibold text-secondary">DFE</div>
-                      <div className="text-sm text-muted-foreground">Déclaration Fiscale</div>
+                      <div className="text-sm text-muted-foreground">CC: 1919176 Y</div>
                     </div>
                   </div>
                 </div>
