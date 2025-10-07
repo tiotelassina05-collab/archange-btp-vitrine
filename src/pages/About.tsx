@@ -1,9 +1,7 @@
 import { Building, Users, Target, Award, Clock, Shield, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="container mx-auto px-6">
@@ -49,7 +47,7 @@ const About = () => {
                 <CardContent>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">100+</div>
+                      <div className="text-3xl font-bold text-primary">50+</div>
                       <div className="text-sm text-muted-foreground">Projets réalisés</div>
                     </div>
                     <div className="text-center">
@@ -215,8 +213,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
