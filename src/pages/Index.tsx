@@ -1,79 +1,133 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Building, Users, Award, CheckCircle, Phone, MessageSquare } from "lucide-react";
+import { ArrowRight, Building, Users, Award, CheckCircle, Phone, MessageSquare, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import heroImage from "@/assets/hero-construction.jpg";
 import buildingImage from "@/assets/building-completed.jpg";
 import workshopImage from "@/assets/workshop-metalwork.jpg";
+import foundationsImage from "@/assets/chantier-fondations-1.jpg";
+import interiorImage from "@/assets/amenagement-interieur-faux-plafond.jpg";
 
 const Index = () => {
+  const slides = [
+    {
+      image: heroImage,
+      badge: "Depuis 2018 en Côte d'Ivoire",
+      title: "Construisons l'avenir",
+      highlight: "ensemble",
+      description: "ARCHANGE BTP SARL, votre partenaire de confiance pour tous vos projets de construction, étude et travaux publics à Yopougon et dans toute la Côte d'Ivoire.",
+      icon: Building,
+    },
+    {
+      image: foundationsImage,
+      badge: "Expertise & Qualité",
+      title: "Étude et suivi",
+      highlight: "de chantier",
+      description: "Nos experts en ingénierie vous accompagnent de la conception à la réalisation de vos projets. Plans détaillés, supervision et contrôle qualité à chaque étape.",
+      icon: Users,
+    },
+    {
+      image: workshopImage,
+      badge: "Fabrication Sur Mesure",
+      title: "Menuiserie",
+      highlight: "& Ferronnerie",
+      description: "Création d'ouvrages en bois, aluminium et métallerie. Portes, fenêtres, portails, mobilier et structures métalliques sur mesure pour sublimer vos espaces.",
+      icon: Award,
+    },
+    {
+      image: interiorImage,
+      badge: "Service Premium",
+      title: "Maintenance",
+      highlight: "& Entretien",
+      description: "Préservez la valeur de vos biens avec nos services de maintenance et d'entretien de bâtiments. Interventions rapides et professionnelles pour tous types d'ouvrages.",
+      icon: Wrench,
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Chantier ARCHANGE BTP"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
-        </div>
-        
-        <div className="relative container mx-auto px-6">
-          <div className="max-w-3xl">
-            <Badge className="mb-6 bg-secondary/90 text-secondary-foreground">
-              Depuis 2018 en Côte d'Ivoire
-            </Badge>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Construisons l'avenir
-              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                ensemble
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-              ARCHANGE BTP SARL, votre partenaire de confiance pour tous vos projets de construction, 
-              étude et travaux publics à Yopougon et dans toute la Côte d'Ivoire.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
-                  Demander un devis
-                  <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-              
-              <div className="flex gap-3">
-                <a href="tel:+2250749992599">
-                  <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Appeler
-                  </Button>
-                </a>
-                
-                <a href="https://wa.me/2250749992599" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    WhatsApp
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-          </div>
-        </div>
+      {/* Hero Carousel Section */}
+      <section className="relative overflow-hidden">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent>
+            {slides.map((slide, index) => (
+              <CarouselItem key={index}>
+                <div className="relative py-20 lg:py-32 overflow-hidden min-h-[600px] flex items-center">
+                  <div className="absolute inset-0">
+                    <img
+                      src={slide.image}
+                      alt={`${slide.title} ARCHANGE BTP`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+                  </div>
+                  
+                  <div className="relative container mx-auto px-6">
+                    <div className="max-w-3xl">
+                      <Badge className="mb-6 bg-secondary/90 text-secondary-foreground">
+                        {slide.badge}
+                      </Badge>
+                      
+                      <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                        {slide.title}
+                        <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                          {slide.highlight}
+                        </span>
+                      </h1>
+                      
+                      <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
+                        {slide.description}
+                      </p>
+                      
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <Link to="/devis">
+                          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
+                            Demander un devis
+                            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                          </Button>
+                        </Link>
+                        
+                        <div className="flex gap-3">
+                          <a href="tel:+2250749992599">
+                            <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+                              <Phone className="w-5 h-5 mr-2" />
+                              Appeler
+                            </Button>
+                          </a>
+                          
+                          <a href="https://wa.me/2250749992599" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
+                              <MessageSquare className="w-5 h-5 mr-2" />
+                              WhatsApp
+                            </Button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4 bg-white/10 border-white/30 text-white hover:bg-white/20" />
+          <CarouselNext className="right-4 bg-white/10 border-white/30 text-white hover:bg-white/20" />
+        </Carousel>
       </section>
 
       {/* Services Highlights */}
