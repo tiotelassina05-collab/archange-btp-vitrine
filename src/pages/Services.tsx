@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { 
   Building, 
   Construction, 
@@ -6,12 +7,23 @@ import {
   Hammer, 
   PaintBucket, 
   ShieldCheck,
-  MessageCircle
+  MessageCircle,
+  ChevronDown
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Services = () => {
+  const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const services = [
     {
       icon: Building,
@@ -23,6 +35,7 @@ const Services = () => {
         "Calculs de structure",
         "Dossiers techniques"
       ],
+      details: "Nos ingénieurs et architectes expérimentés vous accompagnent dès la phase de conception de votre projet. Nous réalisons des études de faisabilité complètes incluant l'analyse du terrain, les études géotechniques, et les études d'impact environnemental. Notre bureau d'études élabore des plans d'exécution détaillés conformes aux normes en vigueur, optimise la structure pour garantir sécurité et durabilité, et produit tous les dossiers administratifs nécessaires. Nous utilisons des logiciels de modélisation 3D (BIM) pour une visualisation précise de votre projet avant sa réalisation.",
       color: "primary"
     },
     {
@@ -35,6 +48,7 @@ const Services = () => {
         "Respect des délais",
         "Reporting détaillé"
       ],
+      details: "Notre équipe de conducteurs de travaux assure une supervision complète de votre chantier du début à la fin. Nous coordonnons l'ensemble des intervenants (maçons, électriciens, plombiers, etc.) pour garantir une exécution fluide et sans retard. Des contrôles qualité rigoureux sont effectués à chaque étape critique : fondations, élévation, étanchéité, finitions. Vous recevez des rapports hebdomadaires détaillés avec photos, avancement des travaux, et planning actualisé. Nous gérons également les modifications éventuelles et résolvons les problèmes techniques en temps réel.",
       color: "secondary"
     },
     {
@@ -47,6 +61,7 @@ const Services = () => {
         "Finitions haut de gamme",
         "Livraison clés en main"
       ],
+      details: "Spécialisés dans la construction de villas, immeubles et locaux commerciaux, nous réalisons des projets sur mesure adaptés à vos besoins. Le gros œuvre inclut terrassement, fondations en béton armé, élévation des murs, dalles et charpente. Le second œuvre comprend plomberie, électricité, menuiseries, revêtements de sols et murs, peinture et faux-plafonds. Nous proposons des finitions haut de gamme avec des matériaux de qualité supérieure. Chaque projet est livré clés en main, avec tous les raccordements effectués et les garanties décennales et biennales fournies.",
       color: "accent"
     },
     {
@@ -59,6 +74,7 @@ const Services = () => {
         "Aménagements extérieurs",
         "Ouvrages d'art"
       ],
+      details: "Nous intervenons sur des projets d'infrastructure pour collectivités et promoteurs privés. Nos prestations incluent la construction et réhabilitation de routes, l'installation de réseaux d'assainissement (eaux pluviales et usées), la pose de réseaux électriques et de télécommunications, ainsi que l'aménagement d'espaces publics (places, parkings, trottoirs). Nous réalisons également des ouvrages d'art tels que ponts, murs de soutènement et caniveaux. Tous nos projets respectent les normes techniques et environnementales en vigueur.",
       color: "primary"
     },
     {
@@ -71,6 +87,7 @@ const Services = () => {
         "Conseil en investissement",
         "Gestion de patrimoine"
       ],
+      details: "Notre pôle immobilier développe des programmes résidentiels de qualité (villas, appartements) et commercialise des terrains viabilisés dans des zones stratégiques d'Abidjan. Nous accompagnons les investisseurs dans leurs choix immobiliers en analysant la rentabilité des projets et en optimisant leur fiscalité. Nos services de gestion de patrimoine incluent la location, l'entretien et la valorisation de vos biens immobiliers. Nous proposons également des solutions de financement en partenariat avec des institutions bancaires.",
       color: "secondary"
     },
     {
@@ -83,6 +100,7 @@ const Services = () => {
         "Mobilier sur mesure",
         "Agencement intérieur"
       ],
+      details: "Notre atelier de menuiserie fabrique et pose des ouvrages sur mesure en bois exotique et en aluminium. Nos réalisations incluent portes d'entrée blindées, portes intérieures design, fenêtres à double vitrage, baies coulissantes, vérandas et pergolas. Nous créons également du mobilier sur mesure (cuisines équipées, placards, bibliothèques, dressings) et réalisons des agencements intérieurs complets. Chaque pièce est fabriquée avec soin dans notre atelier par des artisans qualifiés, garantissant qualité, précision et durabilité.",
       color: "accent"
     },
     {
@@ -95,6 +113,7 @@ const Services = () => {
         "Garde-corps et rampes",
         "Structures métalliques"
       ],
+      details: "Notre équipe de ferronniers et métalliers conçoit et installe des ouvrages métalliques alliant sécurité, esthétique et robustesse. Nous fabriquons portails coulissants ou battants, clôtures décoratives, grilles de protection, et pergolas métalliques. Nos réalisations comprennent également escaliers en acier, garde-corps pour balcons et terrasses, rampes d'accès, ainsi que des structures métalliques pour bâtiments (charpentes, mezzanines). Tous nos ouvrages sont traités contre la corrosion et peuvent être personnalisés selon vos préférences (fer forgé, acier inoxydable, aluminium).",
       color: "primary"
     },
     {
@@ -107,6 +126,7 @@ const Services = () => {
         "Expertise et audit",
         "Formation et accompagnement"
       ],
+      details: "Nous mettons notre expertise au service des particuliers, entreprises et institutions pour les accompagner dans leurs projets de construction. Nos ingénieurs fournissent des conseils en choix de matériaux, techniques de construction et optimisation budgétaire. Nous réalisons des expertises techniques de bâtiments existants (fissures, humidité, structure), des audits énergétiques et des diagnostics avant acquisition. Nous proposons également des formations aux métiers du BTP et un accompagnement personnalisé pour les maîtres d'ouvrage inexpérimentés.",
       color: "secondary"
     },
     {
@@ -119,6 +139,7 @@ const Services = () => {
         "Entretien des équipements",
         "Contrats de maintenance"
       ],
+      details: "Préservez la valeur de votre patrimoine immobilier avec nos services de maintenance régulière et interventions rapides. Nos équipes assurent la maintenance préventive (vérifications périodiques, entretien toiture, façades, plomberie, électricité) et interviennent rapidement en cas de panne ou dégradation. Nous entretenons climatisations, groupes électrogènes, installations sanitaires et systèmes de sécurité. Nos contrats de maintenance sur mesure garantissent disponibilité, réactivité et maîtrise de vos coûts d'exploitation. Service disponible 24h/24 et 7j/7 pour les urgences.",
       color: "accent"
     }
   ];
@@ -176,12 +197,27 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    variant="outline" 
-                    className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                  >
-                    En savoir plus
-                  </Button>
+                  
+                  <Collapsible open={openItems[index]} onOpenChange={() => toggleItem(index)}>
+                    <CollapsibleTrigger asChild>
+                      <Button 
+                        variant="outline" 
+                        className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      >
+                        <span className="flex items-center justify-center gap-2">
+                          En savoir plus
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openItems[index] ? 'rotate-180' : ''}`} />
+                        </span>
+                      </Button>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="mt-4">
+                      <div className="p-4 bg-muted/50 rounded-lg">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {service.details}
+                        </p>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
                 </CardContent>
               </Card>
             ))}
