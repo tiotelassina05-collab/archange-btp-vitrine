@@ -51,7 +51,7 @@ const About = () => {
                       <div className="text-sm text-muted-foreground">Projets réalisés</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-secondary">50+</div>
+                      <div className="text-3xl font-bold text-secondary">20+</div>
                       <div className="text-sm text-muted-foreground">Clients satisfaits</div>
                     </div>
                   </div>
