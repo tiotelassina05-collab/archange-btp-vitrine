@@ -202,7 +202,7 @@ const About = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-background/80 rounded-lg p-4">
                       <div className="font-semibold text-primary">RCCM</div>
-                      <div className="text-sm text-muted-foreground">Registre Commerce</div>
+                      <div className="text-sm text-muted-foreground">CI-ABJ-2018-B-09155</div>
                     </div>
                     <div className="bg-background/80 rounded-lg p-4">
                       <div className="font-semibold text-secondary">DFE</div>
