@@ -125,6 +125,51 @@ export type Database = {
         }
         Relationships: []
       }
+      quote_requests: {
+        Row: {
+          address: string
+          budget: string | null
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          mission: string
+          phone: string
+          project_type: string
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          address: string
+          budget?: string | null
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          mission: string
+          phone: string
+          project_type: string
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          address?: string
+          budget?: string | null
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          mission?: string
+          phone?: string
+          project_type?: string
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       reservations: {
         Row: {
           adults: number | null
