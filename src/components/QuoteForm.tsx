@@ -109,15 +109,39 @@ const QuoteForm = () => {
     setIsLoading(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-quote-email', {
+      // Save to database
+      const { error: dbError } = await supabase
+        .from('quote_requests')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          phone: formData.phone,
+          email: formData.email,
+          address: formData.address,
+          project_type: formData.projectType,
+          mission: formData.mission,
+          budget: formData.budget || null,
+          status: 'new'
+        });
+
+      if (dbError) {
+        console.error('Database error:', dbError);
+        throw dbError;
+      }
+
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke('send-quote-email', {
         body: formData
       });
 
-      if (error) throw error;
+      if (emailError) {
+        console.error('Email error:', emailError);
+        // Don't throw - data is already saved, email is optional
+      }
 
       toast({
         title: "Devis envoyé !",
-        description: "Votre demande de devis a été envoyée avec succès. Nous vous contacterons sous 24-48h.",
+        description: "Votre demande de devis a été enregistrée avec succès. Nous vous contacterons sous 24-48h.",
       });
 
       // Reset form
@@ -132,7 +156,7 @@ const QuoteForm = () => {
         budget: ''
       });
     } catch (error: any) {
-      console.error('Error sending quote:', error);
+      console.error('Error submitting quote:', error);
       toast({
         title: "Erreur",
         description: "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement.",
