@@ -12,6 +12,7 @@ import buildingImage from "@/assets/building-completed.jpg";
 import workshopImage from "@/assets/workshop-metalwork.jpg";
 import foundationsImage from "@/assets/chantier-fondations-1.jpg";
 import interiorImage from "@/assets/amenagement-interieur-faux-plafond.jpg";
+import lassinaTioteImage from "@/assets/lassina-tiote.jpg";
 
 const Index = () => {
   const slides = [
@@ -235,6 +236,70 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mot du Directeur */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-primary/10 text-primary">Message du Directeur Général</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                Mot du Directeur
+              </h2>
+            </div>
+
+            <Card className="overflow-hidden shadow-2xl border-primary/20">
+              <div className="grid lg:grid-cols-5 gap-0">
+                <div className="lg:col-span-2 relative h-[400px] lg:h-auto">
+                  <img 
+                    src={lassinaTioteImage} 
+                    alt="Lassina Tioté - Directeur Général ARCHANGE BTP"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                
+                <div className="lg:col-span-3 p-8 lg:p-12">
+                  <CardContent className="p-0">
+                    <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+                      <p className="text-xl italic text-foreground font-medium">
+                        "Chez ARCHANGE BTP, nous croyons que chaque projet est bien plus qu'un simple chantier : 
+                        c'est une vision qui prend forme, une idée qui devient réalité."
+                      </p>
+                      
+                      <p>
+                        Depuis notre création, nous nous engageons à bâtir avec rigueur, innovation et intégrité, 
+                        en plaçant la qualité, la sécurité et la satisfaction de nos partenaires au cœur de nos priorités.
+                      </p>
+                      
+                      <p>
+                        Fort de plus de dix ans d'expérience dans le génie civil et la gestion de projets de construction, 
+                        j'ai la conviction que le développement durable de notre pays passe par des infrastructures solides, 
+                        modernes et responsables.
+                      </p>
+                      
+                      <p>
+                        C'est pourquoi ARCHANGE BTP s'investit chaque jour pour concevoir et réaliser des ouvrages 
+                        qui répondent aux standards les plus exigeants, tout en valorisant les talents locaux 
+                        et l'excellence technique.
+                      </p>
+                      
+                      <p className="text-foreground font-semibold text-xl pt-4">
+                        Ensemble, continuons de bâtir un avenir durable, un projet à la fois.
+                      </p>
+                      
+                      <div className="pt-6 border-t border-border">
+                        <p className="font-bold text-foreground text-xl">— Lassina Tioté</p>
+                        <p className="text-primary font-medium">Directeur Général, ARCHANGE BTP</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
