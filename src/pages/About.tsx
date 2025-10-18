@@ -1,5 +1,6 @@
 import { Building, Users, Target, Award, Clock, Shield, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import lassinaTioteImage from "@/assets/lassina-tiote.jpg";
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -136,8 +137,60 @@ const About = () => {
         </div>
       </section>
 
-      {/* Expertise */}
+      {/* Direction & Équipe */}
       <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Notre Direction</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Une expertise technique de haut niveau au service de vos projets
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="relative h-[400px] md:h-auto">
+                  <img 
+                    src={lassinaTioteImage} 
+                    alt="Lassina Tioté - Expert en Génie Civil et Management de Projets BTP"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <CardHeader className="p-0 mb-6">
+                    <CardTitle className="text-3xl mb-2">Lassina Tioté</CardTitle>
+                    <CardDescription className="text-lg text-primary font-semibold">
+                      Expert en Génie Civil et Management de Projets BTP
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                      <p>
+                        Lassina Tioté cumule plus de dix ans d'expérience dans la conception, 
+                        la coordination et la réalisation d'ouvrages en Côte d'Ivoire.
+                      </p>
+                      <p>
+                        Diplômé en Génie Civil et passionné par l'innovation, il a dirigé 
+                        de nombreux projets majeurs — bâtiments résidentiels, infrastructures 
+                        publiques et constructions industrielles — alliant rigueur, qualité 
+                        et respect des délais.
+                      </p>
+                      <p className="font-semibold text-foreground">
+                        Il met ses compétences au service d'une vision : bâtir des infrastructures 
+                        durables et innovantes au service du développement.
+                      </p>
+                    </div>
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise */}
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Notre Expertise</h2>
