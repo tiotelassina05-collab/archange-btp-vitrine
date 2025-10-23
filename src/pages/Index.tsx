@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Building, Users, Award, CheckCircle, Phone, MessageSquare, Wrench } from "lucide-react";
+import { ArrowRight, Building, Users, Award, CheckCircle, Phone, MessageSquare, Wrench, Lightbulb, CheckSquare, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -359,6 +359,70 @@ const Index = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conseils et Astuces Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-accent/10 text-accent">
+              <Lightbulb className="w-4 h-4 mr-2 inline" />
+              Conseils d&apos;Expert
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Conseils et Astuces
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Des recommandations pratiques pour réussir vos projets et protéger votre investissement
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <CheckSquare className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-2xl">Bien choisir son entrepreneur</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Avant de confier ton chantier, vérifie les références, le RCCM et le sérieux de l&apos;entrepreneur.
+                </p>
+                <div className="flex items-start gap-3 bg-primary/10 p-4 rounded-lg">
+                  <span className="text-2xl">👉</span>
+                  <p className="text-foreground font-semibold">
+                    Un bon choix, c&apos;est 70 % du chantier déjà réussi !
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Home className="w-8 h-8 text-secondary" />
+                </div>
+                <CardTitle className="text-2xl">Entretiens ta maison régulièrement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Une maison, ça s&apos;entretient !
+                </p>
+                <ul className="space-y-3 mb-4">
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-xl">🧹</span>
+                    <span>Petites réparations, peinture, étanchéité… chaque année compte.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-xl">🏠</span>
+                    <span>L&apos;entretien régulier évite les grosses dépenses.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
