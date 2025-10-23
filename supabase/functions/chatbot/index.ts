@@ -69,9 +69,40 @@ serve(async (req) => {
   try {
     const { message } = await req.json();
 
-    if (!message) {
-      throw new Error('Message is required');
+    // Input validation: check message exists and is within limits
+    if (!message || typeof message !== 'string') {
+      return new Response(
+        JSON.stringify({ error: 'Message is required and must be a string' }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
     }
+
+    // Prevent token abuse: limit message length to 1000 characters
+    if (message.length > 1000) {
+      return new Response(
+        JSON.stringify({ error: 'Message too long. Maximum 1000 characters allowed.' }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    const trimmedMessage = message.trim();
+    if (trimmedMessage.length === 0) {
+      return new Response(
+        JSON.stringify({ error: 'Message cannot be empty' }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    console.log(`Processing chatbot message (${trimmedMessage.length} chars)`);
 
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -98,7 +129,7 @@ Instructions :
           },
           {
             role: 'user',
-            content: message
+            content: trimmedMessage
           }
         ],
         max_tokens: 500,
