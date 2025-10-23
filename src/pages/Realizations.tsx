@@ -64,7 +64,7 @@ const Realizations = () => {
       id: 5,
       title: "Supervision Technique de Chantier",
       category: "batiment",
-      location: "Réhabilitation appartement 2P Treichville",
+      location: "Chantier R+3 M'Pouto",
       year: "2024",
       description: "Suivi technique et contrôle qualité avec ingénieur sur site pour travaux de fondations et gros œuvre.",
       image: ingenieurChantier,
