@@ -74,7 +74,7 @@ const Realizations = () => {
       id: 6,
       title: "Suivi Travaux Gros-oeuvre Fondation",
       category: "travaux-publics",
-      location: "Projet R+3 - Mr.Cissé - Songon",
+      location: "Projet R+3 M'Pouto",
       year: "2024",
       description: "Mesures topographiques et implantation de chantier avec équipements de précision.",
       image: ouvrierMesure,
