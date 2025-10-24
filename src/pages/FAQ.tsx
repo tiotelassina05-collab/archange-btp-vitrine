@@ -7,7 +7,7 @@ import {
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, Star, Quote } from "lucide-react";
 
 const FAQ = () => {
   const faqCategories = [
@@ -141,6 +141,100 @@ const FAQ = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+              Témoignages Clients
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Découvrez ce que nos clients satisfaits disent de leur expérience avec ARCHANGE BTP
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* Testimonial 1 - Mr. N'DAKOU */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
+              <div className="p-6 relative">
+                <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-6 italic leading-relaxed">
+                  "Avec Archange BTP, c'est la rigueur démontrée pendant le suivi qui m'a permis de bâtir mon immeuble R+4 selon les normes."
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-bold text-foreground">Mr. N'DAKOU</p>
+                  <p className="text-sm text-muted-foreground">Propriétaire d'un immeuble R+4</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Testimonial 2 - Mme SYLLA */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-bl-full" />
+              <div className="p-6 relative">
+                <Quote className="w-10 h-10 text-secondary/20 mb-4" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-6 italic leading-relaxed">
+                  "Grâce à ARCHANGE BTP, mon rêve de villa est devenu réalité ! Une équipe à l'écoute, des délais respectés et une qualité de finition exceptionnelle. Aujourd'hui, je profite chaque jour d'une maison qui reflète exactement ce que je voulais."
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-bold text-foreground">Mme SYLLA</p>
+                  <p className="text-sm text-muted-foreground">Propriétaire d'une duplex à Cocody</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Testimonial 3 - M. DIABY Bangali */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full" />
+              <div className="p-6 relative">
+                <Quote className="w-10 h-10 text-accent/20 mb-4" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-6 italic leading-relaxed">
+                  "Collaborer avec ARCHANGE BTP, c'est travailler avec des professionnels qui comprennent les enjeux du chantier. Leur suivi technique rigoureux et leur réactivité ont fait toute la différence sur nos projets immobiliers. Une valeur sûre dans le BTP ivoirien."
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-bold text-foreground">M. DIABY Bangali</p>
+                  <p className="text-sm text-muted-foreground">Promoteur Immobilier - Propriétaire de 2 immeubles Yopougon Sable</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Testimonial 4 - M. CISSE Amadou */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
+              <div className="p-6 relative">
+                <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-foreground mb-6 italic leading-relaxed">
+                  "ARCHANGE BTP a géré mon chantier comme si c'était le leur ! Suivi constant, transparence sur les coûts, et surtout une finition de haut niveau. C'est rare de trouver une entreprise aussi sérieuse."
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-bold text-foreground">M. CISSE Amadou</p>
+                  <p className="text-sm text-muted-foreground">Propriétaire à Yopougon Ananeraie</p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
 
         {/* CTA Section */}
