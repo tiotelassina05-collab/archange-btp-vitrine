@@ -379,7 +379,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
               <CardHeader>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -421,6 +421,26 @@ const Index = () => {
                     <span>L&apos;entretien régulier évite les grosses dépenses.</span>
                   </li>
                 </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
+              <CardHeader>
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Award className="w-8 h-8 text-accent" />
+                </div>
+                <CardTitle className="text-2xl">Ne cherche pas le moins cher, cherche le sérieux</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Le "moins cher" finit souvent par coûter plus cher 😬
+                </p>
+                <div className="flex items-start gap-3 bg-accent/10 p-4 rounded-lg">
+                  <span className="text-2xl">🧱</span>
+                  <p className="text-foreground font-semibold">
+                    Choisis un professionnel fiable, pas juste un prix.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
